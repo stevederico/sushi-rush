@@ -1,0 +1,175 @@
+/* Small screens */
+
+@media (max-width: 760px) {
+  .hud {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      'score time buttons'
+      'tickets tickets tickets';
+    gap: 6px 10px;
+    padding: 6px 10px 8px;
+  }
+
+  .hud-block {
+    grid-auto-flow: column;
+    align-items: baseline;
+    justify-items: start;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .hud-time {
+    justify-self: end;
+  }
+
+  .hud-value {
+    font-size: 1.4rem;
+  }
+
+  .icon-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .tickets {
+    min-height: 92px;
+    gap: 5px;
+  }
+
+  .ticket {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    flex: 1 1 0;
+    max-width: 92px;
+    min-width: 0;
+    padding: 2px 3px 11px;
+  }
+
+  .ticket-parts {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+  }
+
+  .ticket-name {
+    display: none;
+  }
+
+  .ticket .dish-icon {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .ticket .item-icon {
+    width: 17px !important;
+    height: 17px !important;
+  }
+
+  .keys {
+    flex-wrap: nowrap;
+  }
+
+  .key {
+    min-width: 0;
+    padding: 2px 5px;
+    font-size: 0.72rem;
+  }
+
+  .controls th,
+  .controls td {
+    padding: 4px 3px;
+  }
+
+  .levels {
+    grid-template-columns: 1fr;
+  }
+
+  .level-card {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .level-tagline {
+    grid-column: 1 / -1;
+  }
+
+  .level-status {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+
+  .panel {
+    padding: 18px 14px;
+  }
+
+  .coach {
+    min-height: 38px;
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .hud {
+    min-height: 0;
+    padding-block: 4px;
+  }
+
+  .ticket {
+    padding-top: 2px;
+  }
+
+  .ticket .dish-icon {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .hud-value {
+    font-size: 1.3rem;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  75% {
+    transform: translateX(2px) rotate(1deg);
+  }
+}
+
+@keyframes ticket-in {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.2) rotate(-40deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

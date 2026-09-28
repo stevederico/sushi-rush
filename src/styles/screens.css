@@ -1,0 +1,246 @@
+/* Shift cards */
+
+.levels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+.level-card {
+  display: grid;
+  align-content: start;
+  gap: 3px;
+  padding: 14px 12px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.level-card:hover:not(:disabled) {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.level-card:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.level-number {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--warn);
+}
+
+.level-name {
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.level-tagline {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.level-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.level-best {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.level-locked .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+  fill: #565c86;
+}
+
+.star-on {
+  fill: var(--warn);
+}
+
+.stars-big .star {
+  width: clamp(44px, 12vw, 64px);
+  height: clamp(44px, 12vw, 64px);
+}
+
+.stars-big .star-on {
+  animation: pop 500ms cubic-bezier(0.2, 1.6, 0.4, 1) backwards;
+}
+
+.stars-big .star-on:nth-child(2) {
+  animation-delay: 160ms;
+}
+
+.stars-big .star-on:nth-child(3) {
+  animation-delay: 320ms;
+}
+
+/* How to play */
+
+.steps {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 12px;
+  border-radius: 14px;
+  background: var(--panel-light);
+}
+
+.step-title {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.step-text,
+.hazards,
+.controls-touch {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.hazards {
+  display: grid;
+  gap: 4px;
+  text-align: left;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.controls-wrap {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+}
+
+.controls {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.controls th,
+.controls td {
+  padding: 5px 6px;
+  text-align: left;
+}
+
+.controls thead th {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.keys {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.key {
+  min-width: 28px;
+  padding: 3px 7px;
+  border: 2px solid var(--line);
+  border-bottom-width: 4px;
+  border-radius: 8px;
+  background: var(--bg);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Countdown and results */
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.menu-item {
+  display: grid;
+  justify-items: center;
+  width: 92px;
+  padding: 6px 4px;
+  border-radius: 12px;
+  background: var(--panel-light);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.countdown-number {
+  font-size: clamp(3.4rem, 16vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.result-score {
+  display: grid;
+  line-height: 1;
+}
+
+.result-score strong {
+  font-size: clamp(3rem, 14vw, 4.6rem);
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+}
+
+.result-score span {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--warn);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4px 18px;
+  text-align: left;
+}
+
+.stats dt {
+  color: var(--muted);
+}
+
+.stats dd {
+  font-weight: 900;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}

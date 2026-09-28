@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1b1d33" />
+    <meta
+      name="description"
+      content="Sushi Rush is a frantic sushi bar kitchen game. Slice, roll, plate and serve before the tickets run out. Play solo or with a friend on one keyboard."
+    />
+    <title>Sushi Rush</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sushi Rush" />
+    <meta property="og:title" content="Sushi Rush" />
+    <meta
+      property="og:description"
+      content="A frantic sushi bar kitchen game. Slice, roll, plate and serve before the tickets run out. Solo or two players on one keyboard."
+    />
+    <meta property="og:image" content="./og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Sushi Rush title screen over a busy sushi kitchen" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sushi Rush" />
+    <meta
+      name="twitter:description"
+      content="Slice, roll, plate and serve before the tickets run out. Solo or two players on one keyboard."
+    />
+    <meta name="twitter:image" content="./og-image.png" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header id="hud" class="hud" hidden></header>
+      <main id="stage" class="stage">
+        <canvas id="kitchen" class="kitchen" role="img" aria-label="The sushi kitchen"></canvas>
+      </main>
+      <p id="coach" class="coach" role="status" hidden></p>
+      <div id="overlay" class="overlay"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

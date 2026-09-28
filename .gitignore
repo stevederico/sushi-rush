@@ -1,0 +1,11 @@
+node_modules
+dist
+.agent-browser
+.DS_Store
+*.log
+.env
+.env.local
+
+# Local notes, not for the repo
+BRIEF.md
+SUMMARY.md

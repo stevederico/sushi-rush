@@ -1,0 +1,21 @@
+{
+  "name": "sushi-rush",
+  "version": "0.6.0",
+  "private": true,
+  "description": "A frantic sushi bar kitchen game for one or two chefs on one keyboard",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "vite": "8.3.1",
+    "vitest": "5.0.2"
+  }
+}
