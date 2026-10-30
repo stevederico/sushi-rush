@@ -1,3 +1,8 @@
+0.7.0
+
+  Remove analytics loader
+  Remove analytics env
+
 0.6.0
 
   Fix two-chef play

@@ -150,7 +150,7 @@ npm test           # run the unit tests
 
 `dist/` is plain static files with relative paths. Host it anywhere that serves files.
 
-Set `VITE_SITE_URL` at build time to make the link preview image a full URL, which X, iMessage and Slack need. Optional page view tracking loads only when `VITE_ANALYTICS_SRC` and `VITE_ANALYTICS_ID` are set. See `.env.example`.
+Set `VITE_SITE_URL` at build time to make the link preview image a full URL, which X, iMessage and Slack need. See `.env.example`.
 
 <br />
 

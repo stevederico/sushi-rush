@@ -1,6 +1,6 @@
 {
   "name": "sushi-rush",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "description": "A frantic sushi bar kitchen game for one or two chefs on one keyboard",
   "license": "MIT",
